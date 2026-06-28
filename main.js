@@ -1,4 +1,4 @@
-    let canvas = windowdocument.getElementById("myCanvas")
+    let canvas = document.getElementById("myCanvas")
     let context = canvas.getContext("2d");
 
     var windowHeight = window.innerHeight;
