@@ -1,4 +1,4 @@
-    let canvas = document.getElementById("myCanvas")
+    let canvas = document.getElementById("myCanvas");
     let context = canvas.getContext("2d");
 
     var windowHeight = window.innerHeight;
@@ -15,7 +15,7 @@
             this.ypos = ypos;
             this.radius = radius;
             this.color = color;
-        }
+        };
 
         draw(context){
             context.beginPath();
@@ -35,7 +35,8 @@
         cricle.draw(context);
     };
 
-
+    console.log(createCircle);
+    
 
     for (var number = 0; number < 10; number++ ){
 
@@ -45,6 +46,5 @@
         let myCircle = new Circle(randomX, randomY, 50, "blue");
         allCircles.push(myCircle);
         createCircle(allCircles[numbers]);
+    
     };
-
-
