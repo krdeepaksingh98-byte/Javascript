@@ -28,8 +28,8 @@
     };
 
     let allCircles = [];
-
     console.log(allCircles);
+
     
     let createCircle = function(cricle){
         cricle.draw(context);
@@ -41,10 +41,10 @@
     for (var number = 0; number < 10; number++ ){
 
         let randomX = Math.random() * windowWidth;
-        let randomY = Math.random() * windowWidth;
+        let randomY = Math.random() * windowHeight;
 
         let myCircle = new Circle(randomX, randomY, 50, "blue");
         allCircles.push(myCircle);
-        createCircle(allCircles[numbers]);
+        createCircle(allCircles[number]);
     
     };
