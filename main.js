@@ -20,8 +20,10 @@
         draw(context){
             context.beginPath();
             context.lineWidth = 8;
+            context.fillStyle = this.color;
             context.strokeStyle = this.color;
             context.arc(this.xpos, this.ypos, this.radius, 0, Math.PI * 2, false);
+            context.fill();
             context.stroke();
             context.closePath();
         }
@@ -31,8 +33,8 @@
     console.log(allCircles);
 
     
-    let createCircle = function(cricle){
-        cricle.draw(context);
+let createCircle = function(circle){
+    circle.draw(context);
     };
 
     console.log(createCircle);
