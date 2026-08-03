@@ -2,6 +2,8 @@
 ## baise ts 
 
 ``
+
+    
     let respons: any = "42";
     let numbericLinght: number = (respons as string).length;
     console.log(numbericLinght);
