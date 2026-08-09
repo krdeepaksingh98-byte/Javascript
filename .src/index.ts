@@ -128,7 +128,7 @@ type ChaiObject = {
 
     let bookObject = JSON.parse(bookString) as book;
     console.log(bookObject.name);
-    
+
     let value: any;
 
     value = "Hello, world!";
@@ -144,4 +144,28 @@ type ChaiObject = {
 
     if (typeof NewValue === "string") {
         NewValue.toUpperCase();
-    }
+    };
+
+    // interface
+
+    type TeaRecipe = {
+        water: number,
+        milk : number,
+    };
+
+    class  MasalaChai implements TeaRecipe {
+        milk= 150;
+        water= 100;
+    };
+
+
+
+    interface  CupSize  {
+        size:  "small" | "large ";
+    };
+
+    class chai implements CupSize {
+        size: "small" | "large " = "large "
+    };
+
+    
