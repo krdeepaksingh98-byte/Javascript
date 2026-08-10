@@ -168,4 +168,23 @@ type ChaiObject = {
         size: "small" | "large " = "large "
     };
 
+    // Array in ts
+
+    let chaiOrders: string[] = ["Masala", "Ginger", "Tulsi"];
+
+    let chaiOrders2: Array<string> = ["Masala", "Ginger", "Tulsi"];
+
+    let Order: [string, number] = ["Masala", 2];
+
+    let Order2: [string, number, boolean] = ["Ginger", 1, true];
+
+    enum Chai9 {
+        small = 1,
+        medium = 2,
+        large = 3,
+    };
+
+    let sizeChai = Chai9.large;
+
+    console.log(sizeChai);
     
