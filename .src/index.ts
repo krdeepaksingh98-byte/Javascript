@@ -188,3 +188,42 @@ type ChaiObject = {
 
     console.log(sizeChai);
     
+
+    // oops ts
+
+    class chai7 {
+        public name: string;
+        public size: number;
+
+        constructor(name: string, size: number) {
+            this.name = name;
+            this.size = size;
+        };
+
+        private Rupee: number = 50000;
+
+        revealRupee() {
+            return this.Rupee;
+        };
+    };
+
+    let chaiOrder = new chai7("Masala", 2);
+    console.log(chaiOrder);
+    
+
+    class mordenChai {
+        private _sugar: number = 5;
+
+        get sugar() {
+            return this._sugar;
+        };
+
+        set sugar (value: number) {
+            if (value > 5) throw new Error ("Too sweet");
+            this._sugar = value;
+        }
+    };
+
+    let c = new mordenChai();
+    c.sugar = 4;
+    console.log(c.sugar);
