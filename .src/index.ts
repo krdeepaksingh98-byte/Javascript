@@ -167,6 +167,41 @@ type ChaiObject = {
     class chai implements CupSize {
         size: "small" | "large " = "large "
     };
+    // generic
+
+    function wrapInArray<T>(item: T): T[] {
+        return [item];
+    };
+
+    wrapInArray("Hello"); // Returns: ["Hello"]
+    wrapInArray(42); // Returns: [42]
+    wrapInArray({ name: "Alice", age: 30 });
+
+    function pair <A, B>(a: A, b: B): [A, B] {
+        return [a, b];
+    };
+
+    pair("Hello", 42);
+    pair({ name: "Alice" }, [1, 2, 3]);
+
+    interface Box<T> {
+        content: T;
+    };
+
+    let numberBox: Box<number> = { content: 42 };
+
+    interface ApiPromise<T> {
+        status: number;
+        data: T;
+    };
+
+    let res: ApiPromise<{flaver: string}> = {
+        status: 200,
+        data: { flaver: "Masala" },
+    };
+
+    
+
 
     // Array in ts
 
